@@ -42,4 +42,4 @@ bower.json
 !/log/.keep
 /tmp
 
-.idea*
+.idea/*
