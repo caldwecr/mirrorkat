@@ -1,0 +1,19 @@
+<h1>Listing streams</h1>
+
+<%= link_to 'New stream', new_meerkat_stream_path %>
+
+<table>
+  <tr>
+    <th>Link</th>
+    <th colspan="3"></th>
+  </tr>
+
+  <% @meerkat_streams.each do |meerkat_stream| %>
+      <tr>
+        <td><%= meerkat_stream.link %></td>
+        <td><%= link_to 'Show', meerkat_stream_path(meerkat_stream) %></td>
+        <td><%= link_to 'Edit', edit_meerkat_stream_path(meerkat_stream) %></td>
+        <td><%= link_to 'Destroy', meerkat_stream_path(meerkat_stream), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>
